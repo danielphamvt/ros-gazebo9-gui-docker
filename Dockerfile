@@ -38,6 +38,9 @@ RUN git clone https://github.com/ROBOTIS-GIT/turtlebot3_machine_learning.git
 RUN sudo apt install -y python-pip
 RUN /bin/bash -c "pip install --upgrade pip;pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl;pip install keras==2.1.5;pip install Werkzeug==0.16.1;pip install h5py;pip install pyqtgraph==0.11.0"
 
+# Installing Atom Editor
+RUN add-apt-repository ppa:webupd8team/atom && apt update && apt install -y atom
+
 RUN sudo apt-get update && sudo apt-get -y upgrade
 
 # Build pakages
